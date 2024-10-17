@@ -1,39 +1,27 @@
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Integration</title>
-    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-</head>
-<body>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  location="asia-northeast1"
+  project-id="anxiety-chatbot0"
+  agent-id="73291147-66c0-48e9-bd44-7a6eb24deeef"
+  language-code="ko"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+   chat-title="유지현">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
 
-    <df-messenger
-      location="asia-northeast1"
-      project-id="anxiety-chatbot0"
-      agent-id="73291147-66c0-48e9-bd44-7a6eb24deeef"
-      language-code="ko"
-      max-query-length="-1">
-      <df-messenger-chat-bubble
-       chat-title="유지현">
-      </df-messenger-chat-bubble>
-    </df-messenger>
-
-    <style>
-      df-messenger {
-        z-index: 999;
-        position: fixed;
-        --df-messenger-font-color: #000;
-        --df-messenger-font-family: Google Sans;
-        --df-messenger-chat-background: #f3f6fc;
-        --df-messenger-message-user-background: #d3e3fd;
-        --df-messenger-message-bot-background: #fff;
-        bottom: 16px;
-        right: 16px;
-      }
-    </style>
-
-</body>
-</html>

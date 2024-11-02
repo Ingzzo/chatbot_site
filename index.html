@@ -1,6 +1,7 @@
 
 <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
 <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
 <df-messenger
   location="asia-northeast1"
   project-id="anxiety-chatbot0"
@@ -11,17 +12,26 @@
    chat-title="유지현">
   </df-messenger-chat-bubble>
 </df-messenger>
+
 <style>
   df-messenger {
-    z-index: 999;
+    z-index: 9999; /* 다른 요소 위에 표시 */
     position: fixed;
+    
+    /* 크기 조정 */
+    --df-messenger-width: 500px; /* 챗봇 너비 */
+    --df-messenger-height: 700px; /* 챗봇 높이 */
+
+    /* 화면 중앙에 배치 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 사용자 지정 색상 및 스타일 */
     --df-messenger-font-color: #000;
     --df-messenger-font-family: Google Sans;
     --df-messenger-chat-background: #f3f6fc;
     --df-messenger-message-user-background: #d3e3fd;
     --df-messenger-message-bot-background: #fff;
-    bottom: 16px;
-    right: 16px;
   }
 </style>
-

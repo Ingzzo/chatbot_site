@@ -13,9 +13,9 @@
 </df-messenger>
 
 <style>
-  /* 아이콘 위치 설정 */
+  /* 아이콘 크기 및 위치 설정 */
   df-messenger {
-    --df-messenger-chat-bubble-size: 50px; /* 아이콘 크기 */
+    --df-messenger-chat-bubble-size: 50px; /* 챗봇 아이콘 크기 */
     position: fixed;
     bottom: 16px;
     right: 16px;
@@ -23,13 +23,20 @@
   }
 
   /* 대화 창 크기 및 위치 조정 */
-  df-messenger[opened] .df-messenger-wrapper {
-    width: 80vw !important; /* 전체 화면 너비의 80% */
-    height: 80vh !important; /* 전체 화면 높이의 80% */
-    max-width: none !important; /* 기본 최대 너비 해제 */
-    max-height: none !important; /* 기본 최대 높이 해제 */
+  df-messenger[opened] .df-chat-wrapper {
+    width: 80vw !important; /* 화면 너비의 80% */
+    height: 80vh !important; /* 화면 높이의 80% */
+    max-width: 80vw !important;
+    max-height: 80vh !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+  }
+
+  /* 대화 창의 iframe 내부 스타일 */
+  df-messenger[opened] .df-messenger-chat {
+    height: 100% !important;
   }
 </style>
